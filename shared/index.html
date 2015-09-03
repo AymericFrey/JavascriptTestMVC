@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>TP 03 - MVC</title>
+    <link rel="stylesheet" href="../lib/bootstrap.min.css">
+    <link rel="stylesheet" href="../lib/bootstrap-theme.min.css">
+    
+  </head>
+  <body class="container">
+    <h1>IMIECommerce</h1>
+    <!-- TODO Créer la vue 00:00:00 -->
+    
+	<br />
+	
+    <div id="list" class="col">
+		<div class="col">
+			<button id="newEditBtn" class="col-md-1 btn btn-success" type="button" >nouveau</button>
+		</div>
+		<table id="productList">
+			<tr><th class="col-md-1"></th><th class="col-md-1">ID</th><th class="col-md-1">label</th><th class="col-md-1">price</th><th class="col-md-3" >actions</th>
+		</table>
+	</div>	
+	
+	<div id="createForm">
+		<div class="col">
+			<button id="listBtn" class="col-md-2 btn btn-success" type="button" >Liste des produits</button><br />
+		</div>
+		<br />
+		<div class="col">
+			<form id="cForm">
+			  <div class="form-group">
+				<label for="idInput">ID</label>
+				<input type="text" class="form-control" id="idInput" >
+			  </div>
+			  <div class="form-group">
+				<label for="labelInput">Label</label>
+				<input type="text" class="form-control" id="labelInput" >
+			  </div>
+			  <div class="form-group">
+				<label for="priceInput">Price</label>
+				<input type="text" class="form-control" id="priceInput" >
+			  </div>
+			  <div class="form-group">
+				<label for="urlInput">ImageURL</label>
+				<input type="text" class="form-control" id="urlInput" >
+			  </div>
+			  <button id="submitCreation" type="button" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+	
+	<div id="editForm">
+		<div class="col">
+			<button id="listBtn" class="col-md-2 btn btn-success" type="button" >Liste des produits</button><br />
+		</div>
+		<br />
+		<div class="col">
+			<form id="eForm">
+			  <div class="form-group">
+				<label for="idEdit">ID</label>
+				<input type="text" class="form-control" id="idEdit" >
+			  </div>
+			  <div class="form-group">
+				<label for="labelEdit">Label</label>
+				<input type="text" class="form-control" id="labelEdit" >
+			  </div>
+			  <div class="form-group">
+				<label for="priceEdit">Price</label>
+				<input type="text" class="form-control" id="priceEdit" >
+			  </div>
+			  <div class="form-group">
+				<label for="urlEdit">ImageURL</label>
+				<input type="text" class="form-control" id="urlEdit" >
+			  </div>
+			  <button id="submitEdit" type="button" class="btn btn-default">Submit</button>
+			</form>
+		</div>
+	</div>
+		
+	
+	<script src="../lib/jquery-2.1.4.min.js"></script>
+    <script src="../lib/bootstrap.min.js"></script>
+    <script src="../shared/pattern.observer.js" charset="utf-8"></script>
+	<script src="../product/view/list.product.view.js" charset="utf-8"></script>
+	<script src="../product/view/edit.product.view.js" charset="utf-8"></script>
+	<script src="../shared/model/product.model.js" charset="utf-8"></script>
+	<script src="../shared/pattern.observer.js" charset="utf-8"></script>
+	<script src="../product/product.ctrl.js" charset="utf-8"></script>
+	
+	<script>displayView.update()</script>
+  </body>
+</html>
